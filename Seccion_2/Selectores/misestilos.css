@@ -1,0 +1,20 @@
+body{
+    background-color: crimson;
+ }
+
+ .principal{ 
+    font-family: Verdana, Geneva, Tohama, sans-serif;
+ }
+
+ #informacion{
+    text-align: center;
+  }
+
+  a[href*=".edu"]{ 
+    background-color: green;
+  }
+
+  h1: hover{ 
+color: :red
+   }
+   
