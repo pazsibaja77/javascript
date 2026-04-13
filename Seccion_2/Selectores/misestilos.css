@@ -17,4 +17,9 @@ body{
   h1: hover{ 
 color: :red
    }
+
+   #titulo{
+
+      text-align: center;
+   }
    
