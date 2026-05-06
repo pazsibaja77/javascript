@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Ingresos de Usuario 1</title>
+</head>
+<body>
+    <p>ingresa tu color favorito</p>
+    <input type="text" id="inpuText">
+    <button onclick="mostrarNombre()">Ingresar</button>
+    <h1 id="titulo">No se tu nombre</h1>
+
+    <script>
+        function mostrarNombre() {
+            let color = document.getElementById("inputText")
+            let nombreColor = document.getElementById("titulo")
+            let mensaje = "Tu color favorito es " + nombreColor.Value 
+
+            nombreColor.textContent = mensaje;
+
+
+        }
+    </script>
+
+</body>
+</html>
