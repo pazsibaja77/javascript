@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regresivo</title>
+</head>
+<html>
+    <body{ 
+    font-family: Arial, sans -serif;
+    text-align:center;
+    margin-top:50px;
+}
+   
+
+   #Contador {
+    font-size: 2em;
+    margin: 20px;
+   }
+
+button {
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<h1> Contador Regresivo</h1>
+<div id="contador>30</div>
+<button onlick="iniciarContador()"  Iniciar</button>
+<button onlick="reiniciarContador()"Reiniciar</button>
+
+<script>
+    let tiempo = 30;
+    let intervalo;
+     
+    function actualizarContador() {
+        document.getElementById("Contador").textContent = tiempo;
+    }
+
+    function contar() {
+        if (tiempo > 0) {
+        tiempo--;
+        console.log(tiempo)
+        actualizarContador();
+       } else {
+    }
+
+    detenerContador();
+    alert("!tiempo terminado!");
+    {
+
+    }
+
+    function iniciarContador() {
+        if (!intervalo)
+        intervalo = setInterval(contar, 1000);
+    }
+function detenerContador() {
+}
+clearInterval(intervalo);
+intervalo = null;
+}
+ function reiniciarContador(){
+    detenerContado();
+    tiempo = 30;
+    actualizarContador();
+ }
+</script>
