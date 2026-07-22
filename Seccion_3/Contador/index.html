@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador Regresivo</title>
-</head>
-<html>
-    <body{ 
-    font-family: Arial, sans -serif;
+    <style>
+    body {
+    font-family: Arial, sans-serif;
     text-align:center;
     margin-top:50px;
-}
+    }
    
 
    #Contador {
@@ -32,9 +31,10 @@ button {
 <body>
 
 <h1> Contador Regresivo</h1>
-<div id="contador>30</div>
-<button onlick="iniciarContador()"  Iniciar</button>
-<button onlick="reiniciarContador()"Reiniciar</button>
+<div id="contador">30</div>
+<button onclick="iniciarContador()">Iniciar</button>
+<button onclick="detenerContador()">Detener</button>
+<button onclick="reiniciarContador()">Reiniciar</button>
 
 <script>
     let tiempo = 30;
@@ -53,7 +53,7 @@ button {
     }
 
     detenerContador();
-    alert("!tiempo terminado!");
+    alert("¡tiempo terminado!");
     {
 
     }
@@ -73,3 +73,6 @@ intervalo = null;
     actualizarContador();
  }
 </script>
+    
+</body>
+</html>

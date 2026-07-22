@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de preguntas</title>
+</head>
+<body onload="iniciarJuego()">
+    <div class="juego"
+    <h1>Responde las siguientes preguntas</h1>
+    <div>
+
+    </div class="pregunta">
+    <p>¿Qué elemento químico tiene el símbolo Au?</p>
+    <input type="text" id="p1" placeholder="¡Escribe tu respuesta!">
+    </div>
+
+    </div class="pregunta">
+    <p>¿Quién escribió «La Ilíada» y «La Odisea»?</p>
+    <input type="text" id="p1" placeholder="¡Escribe tu respuesta!">
+    </div>
+
+    </div class="pregunta">
+    <p>¿Qué elementos químicos forman el agua?</p>
+    <input type="text" id="p1" placeholder="¡Escribe tu respuesta!">
+    </div>
+
+    </div class="pregunta">
+    <p>¿Qué es el Big Bang?</p>
+    <input type="text" id="p1" placeholder="¡Escribe tu respuesta!">
+    </div>
+
+    </div class="pregunta">
+    <p>¿Qué descubrió Marie Curie?</p>
+    <input type="text" id="p1" placeholder="¡Escribe tu respuesta!">
+    </div>
+    <!-- Botones de acción -->
+        <button id="btn-finalizar" onclick="finalizarJuego()">Finalizar</button>
+        <button id="btn-reiniciar" onclick="location.reload()">Volver a intentar</button>
+    </div>
+
+    <script>
+        let tiempoRestante = 30;
+        let intervaloTiempo;
+        let juegoTerminado = false;
+
+        function iniciarJuego(){
+
+        intervaloTiempo = setInterval();{
+                tiempoRestante--;
+                document.getElementById('temporizador').textContent = tiempoRestante;
+
+                if (tiempoRestante <= 0) 
+                    clearInterval(intervaloTiempo);
+                    juegoTerminado = true;
+            
+        }
+        }
+        

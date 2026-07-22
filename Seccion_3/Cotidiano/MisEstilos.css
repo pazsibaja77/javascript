@@ -1,0 +1,86 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contenedor-juego {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contador-box {
+            background: #ffeaa7;
+            border-left: 6px solid #fdcb6e;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .pregunta-item {
+            margin-bottom: 20px;
+        }
+
+        
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        
+        
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-finalizar {
+            background-color: var(--secondary-color);
+            color: #fff;
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+
+        .btn-finalizar:hover {
+            background-color: #2bc3a2;
+        }
+
+        .btn-reiniciar {
+            background-color: #ff7675;
+            color: #fff;
+        }
+
+        .btn-reiniciar:hover {
+            background-color: #d63031;
+        }
+
