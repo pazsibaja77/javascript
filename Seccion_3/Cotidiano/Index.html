@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Juego de preguntas</title>
-</head>
+     <link rel="stylesheet" href="MisEstilos.css"
+
 <body onload="iniciarJuego()">
     <div class="juego"
     <h1>Responde las siguientes preguntas</h1>
@@ -45,6 +47,7 @@
         let juegoTerminado = false;
 
         function iniciarJuego(){
+        }
 
         intervaloTiempo = setInterval();{
                 tiempoRestante--;
@@ -52,8 +55,17 @@
 
                 if (tiempoRestante <= 0) 
                     clearInterval(intervaloTiempo);
-                    juegoTerminado = true;
-            
-        }
-        }
-        
+                    juegoTerminado = true; 
+                    }
+    </script>
+
+
+    <h1>Tiempo restante</h1>
+    <h2 id="contador">30</h2>
+
+    
+
+        <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+    
