@@ -1,13 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="misEstilos.css">
 </head>
 <body>
-    
-    
-    
+<div class="caja-operativa">
+    <h1>CALCULADORA</h1>
+    <input type="text" id="valorA">
+    <input type="text" id="valorB">
+
+    <div class="bloque-botones">
+        <button onclick="ejecutarSuma()">+</button>
+        <button onclick="ejecutarResta()">-</button>
+        <button onclick="ejecutarMultiplicacion()">x</button>
+        <button onclick="ejecutarDivision()">/</button>
+        <button onclick="obtenerRaiz()">Raiz</button>
+        <button onclick="obtenerPotencia()">Potencia</button>
+        <button onclick="obtenerAbsoluto()">Absoluto</button>
+        <button onclick="generarAleatorio()">Random</button>
+    </div>
+
+    <h2>Resultado:</h2>
+
+    <input type="text" id="salidaDatos" readonly placeholder="0">
+
+    <div class="bloque-ajustes">
+        <button onclick="aplicarRedondeo()">Round</button>
+        <button onclick="aplicarPiso()">Floor</button>
+        <button onclick="aplicarTecho()">Ceil</button>
+    </div>
+</div>
+<script>
+function ejecutarSuma() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let dato2 = Number(document.getElementById("valorB").value);
+    let operacion = dato1 + dato2;
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function ejecutarResta() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let dato2 = Number(document.getElementById("valorB").value);
+    let operacion = dato1 - dato2;
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function ejecutarMultiplicacion() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let dato2 = Number(document.getElementById("valorB").value);
+    let operacion = dato1 * dato2;
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function ejecutarDivision() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let dato2 = Number(document.getElementById("valorB").value);
+    if (dato2 === 0) {
+        document.getElementById("salidaDatos").value = "Error: División por cero";
+    } else {
+        let operacion = dato1 / dato2;
+        document.getElementById("salidaDatos").value = operacion;
+    }
+}
+
+function obtenerRaiz() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let operacion = Math.sqrt(dato1);
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function obtenerPotencia() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let dato2 = Number(document.getElementById("valorB").value);
+    let operacion = Math.pow(dato1, dato2);
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function obtenerAbsoluto() {
+    let dato1 = Number(document.getElementById("valorA").value);
+    let operacion = Math.abs(dato1);
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function generarAleatorio() {
+    let operacion = Math.random();
+    document.getElementById("salidaDatos").value = operacion;
+}
+
+function aplicarRedondeo() {
+    let actual = Number(document.getElementById("salidaDatos").value);
+    let final = Math.round(actual);
+    document.getElementById("salidaDatos").value = final;
+}
+
+function aplicarPiso() {
+    let actual = Number(document.getElementById("salidaDatos").value);
+    let final = Math.floor(actual);
+    document.getElementById("salidaDatos").value = final;
+}
+
+function aplicarTecho() {
+    let actual = Number(document.getElementById("salidaDatos").value);
+    let final = Math.ceil(actual);
+    document.getElementById("salidaDatos").value = final;
+}
+</script>
 </body>
 </html>
