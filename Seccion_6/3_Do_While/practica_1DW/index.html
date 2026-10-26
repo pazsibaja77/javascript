@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica Loop Do While 1</title>
+</head>
+<body>
+    <script>
+        function testLoop(vueltas) {
+            let i = 1;
+            do {
+                document.write("Vuelta número: " + i + "<br>");
+                i++;
+            } while (i <= vueltas);
+        }
+
+        let cantidad = prompt("¿Cuántas vueltas quieres dar?");
+        testLoop(Number(cantidad));
+    </script>
+</body>
+</html>

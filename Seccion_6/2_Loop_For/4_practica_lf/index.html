@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop For 4</title>
+</head>
+<body>
+    <input type="number" id="numInput" value="5" oninput="actualizarTabla()">
+    <div id="resultado"></div>
+
+    <script>
+        function testLoop(numero) {
+            let contenido = "";
+            for (let i = 1; i <= 10; i++) {
+                contenido += numero + " x " + i + " = " + (numero * i) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = contenido;
+        }
+
+        function actualizarTabla() {
+            let val = document.getElementById("numInput").value;
+            testLoop(Number(val));
+        }
+
+        testLoop(5);
+    </script>
+</body>
+</html>
